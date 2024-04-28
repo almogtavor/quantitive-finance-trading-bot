@@ -96,7 +96,7 @@ if __name__ == "__main__":
         rsi = calculate_rsi(prices[:i])
 
         if not in_position and is_last_minute_before_closing(current_timestamp):
-                cost_of_buying = current_price + (2 * FEE_PER_TRADE)  # Consider fees for both buying and selling
+            cost_of_buying = current_price + (2 * FEE_PER_TRADE)  # Consider fees for both buying and selling
             # Check for buying condition at the last minute before the market closes
             if balance >= cost_of_buying:
                 print(f"BUY reason: Price above 1-hour MA: {one_hour_ma[-1]}, 5-minute MA trending up, RSI: {rsi[-1]}")
